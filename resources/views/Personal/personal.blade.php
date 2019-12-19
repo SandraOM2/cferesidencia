@@ -34,7 +34,7 @@
                 <thead>
                   <tr>
                     <th></th>
-                    <th>RPE</th>
+                    <th>RPE:</th>
                     <th>Nombre</th>
                     <th>Puesto</th>
                   </tr>
