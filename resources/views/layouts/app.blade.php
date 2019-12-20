@@ -35,19 +35,29 @@
 
   <link href="{{ asset('css/checklist.css') }}" rel="stylesheet">
   
+  
 </head>
 <body>
     <div id="page-top">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        
+             @guest 
+             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             
                     <a class="navbar-brand mr-1" href="/home" ><img src="img/logocfe.png" height="40" width="70">
                 </a>
-                
+
+             @else    
+
+             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            
+                    <a class="navbar-brand mr-1" href="/home" ><img src="img/logocfe.png" height="40" width="70">
+                </a>
+
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0 "  id="sidebarToggle" href="#"  style="background:#14BF46">
      <i class="fas fa-bars"></i>
     </button>
-
+@endguest
                  <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
@@ -62,14 +72,10 @@
 
 
                         @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <li class="nav-item" >
+                               <a class="nav-link"href="{{ route('login')}}">{{ __('Login') }}</a>
                             </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
+                           
                         @else
 
 <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -152,7 +158,7 @@
       </li>
 
 
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="/home">
           <i class="fas fa-hard-hat"></i>
           <span>Personal Operador</span>
@@ -192,4 +198,5 @@
 
   <!------- tabla ---->
   <script src="js/tabla.js"></script>
+  <script src="js/check.js"></script>
 </html>

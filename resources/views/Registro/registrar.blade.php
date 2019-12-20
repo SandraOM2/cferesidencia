@@ -91,106 +91,30 @@
       </div>
       <div class="modal-body">
 
-    <span class="todo-wrap">
-    <input type="checkbox" id="1" >
-    <label for="1" class="todo">
-      <i class="fa fa-check"></i>
-      Cinturón de seguridad
-    </label>
-    </span>
-    <span>
-       <i class="fas fa-camera"></i>
-    </span>
-  <span class="todo-wrap">
-    <input type="checkbox" id="2"/>
-    <label for="2" class="todo">
-      <i class="fa fa-check"></i>
-      Guantes dieléctricos clase 3
-    </label>
-    <span>
-       <i class="fas fa-camera"></i>
-    </span>
-  </span>
-  <span class="todo-wrap">
-    <input type="checkbox" id="3"/>
-    <label for="3" class="todo">
-      <i class="fa fa-check"></i>
-      Guantes de piel suave para electricista
-    </label>
-    <span>
-       <i class="fas fa-camera"></i>
-    </span>
-   <!-- <span class="delete-item" title="remove">
-      <i class="fa fa-times-circle"></i>
-    </span>-->
-  </span>
-	<span class="todo-wrap">
-    <input type="checkbox" id="4"/>
-    <label for="4" class="todo">
-      <i class="fa fa-check"></i>
-      Guantes de piel largo para electricista
-    </label>
-    <span>
-       <i class="fas fa-camera"></i>
-    </span>
-   <!-- <span class="delete-item" title="remove">
-      <i class="fa fa-times-circle"></i>
-    </span>-->
-  </span>
-  <span class="todo-wrap">
-    <input type="checkbox" id="5" >
-    <label for="5" class="todo">
-      <i class="fa fa-check"></i>
-      Cinturón de seguridad
-    </label>
-    <span>
-       <i class="fas fa-camera"></i>
-    </span>
-
-   <!-- <span class="delete-item" title="remove">
-      <i class="fa fa-times-circle"></i>
-    </span>-->
-  </span>
-  <span class="todo-wrap">
-    <input type="checkbox" id="6"/>
-    <label for="6" class="todo">
-      <i class="fa fa-check"></i>
-      Guantes dieléctricos clase 3
-    </label>
-    <span>
-       <i class="fas fa-camera"></i>
-    </span>
-   <!-- <span class="delete-item" title="remove">
-      <i class="fa fa-times-circle"></i>
-    </span>-->
-  </span>
-  <span class="todo-wrap">
-    <input type="checkbox" id="7"/>
-    <label for="7" class="todo">
-      <i class="fa fa-check"></i>
-      Guantes de piel suave para electricista
-    </label>
-   <span>
-       <i class="fas fa-camera"></i>
-    </span>
-  </span>
-	<span class="todo-wrap">
-    <input type="checkbox" id="8"/>
-    <label for="8" class="todo">
-      <i class="fa fa-check"></i>
-      Guantes de piel largo para electricista
-      </label>
-      <span>
-       <i class="fas fa-camera"></i>
-    </span>
+   <table class="table table-borderless" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Herramienta</th>
+                    <th>Foto</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                   
+                    <td><div class="custom-control custom-switch"><input type="checkbox" class="custom-control-input" id="customSwitch1"><label class="custom-control-label" for="customSwitch1"></label></div></td>
+                    <td>Cable</td>
+                    <td><button type="button" class="btn btn-success"><i class="fas fa-camera"></i></button></td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+            
+            
+        
 
      
-      
-     
- <!-- <div id="add-todo">
-    <i class="fa fa-plus"></i>
-    Agregar Herramienta
-  </div>-->
 
 
       </div>
@@ -217,7 +141,7 @@
       <div class="modal-body">
 
        <div class="form-group">
-    <label for="exampleFormControlTextarea1">....</label>
+    <label for="exampleFormControlTextarea1"></label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
        </div>

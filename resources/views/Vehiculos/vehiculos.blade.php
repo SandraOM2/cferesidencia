@@ -11,8 +11,8 @@
     <div class="col">
         <span class="float-right">
     <button type="button" class="btn btn-secondary" data-toggle="modal"  data-target="#Añadir"><i class="fas fa-plus"></i></button>
-    <button type="button" class="btn btn-secondary"data-toggle="modal"  data-target="#Editar"><i class="fas fa-edit"></i></button>
-    <button type="button" class="btn btn-secondary"data-toggle="modal" data-target="#Eliminar"><i class="fas fa-trash-alt"></i></button>
+   <!-- <button type="button" class="btn btn-secondary"data-toggle="modal"  data-target="#Editar"><i class="fas fa-edit"></i></button>
+    <button type="button" class="btn btn-secondary"data-toggle="modal" data-target="#Eliminar"><i class="fas fa-trash-alt"></i></button>-->
     <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Descarga"><i class="fas fa-download"></i></button>
         </span>
 
@@ -32,7 +32,6 @@
               <table id="dt-basic-checkbox" class="table table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
                   <tr>
-                    <th></th>
                     <th>N° Econ&oacutemico</th>
                     <th>Modelo</th>
                     <th>Marca</th>
@@ -41,11 +40,12 @@
                     <th>Num Serie</th>
                     <th>Num Hidr&aacuteulico</th>
                     <th>Llantas</th>
+                      <th></th>
+                      <th></th>
                   </tr>
                 </thead>
                 <tfoot>
                   <tr>
-                    <th></th>
                     <th>N° Econ&oacutemico</th>
                     <th>Modelo</th>
                     <th>Marca</th>
@@ -54,11 +54,12 @@
                     <th>Num Serie</th>
                     <th>Num Hidr&aacuteulico</th>
                     <th>Llantas</th>
+                      <th></th>
+                      <th></th>
                   </tr>
                 </tfoot>
                 <tbody>
-                  <tr class="unread">
-                    <td class=""><label><input type="checkbox" checked="" class="i-checks"></label></td>
+                  <tr >
                     <td>0987</td>
                     <td>2009</td>
                     <td>ford</td>
@@ -67,6 +68,8 @@
                     <td>948564647</td>
                     <td>12</td>
                     <td>buen estado</td>
+                    <td><button type="button" class="btn btn-info"data-toggle="modal"  data-target="#Editar"><i class="fas fa-edit"></i></button></td>
+                    <td><button type="button" class="btn btn-danger"data-toggle="modal" data-target="#Eliminar"><i class="fas fa-trash-alt"></i></button></td>
                     </tr>
                   
          
@@ -306,4 +309,4 @@
   </div>
 </div>
 
-      @endsection
+@endsection

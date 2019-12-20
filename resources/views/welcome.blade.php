@@ -74,11 +74,9 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}"><i class="fas fa-user"></i> Login</a>
+                        <a href="{{ route('login') }}"><i class="fas fa-user-circle"></i></i> Login</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
+                    
                     @endauth
                 </div>
             @endif

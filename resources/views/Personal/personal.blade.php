@@ -12,8 +12,8 @@
     <div class="col">
         <span class="float-right">
     <button type="button" class="btn btn-secondary" data-toggle="modal"  data-target="#Añadir"><i class="fas fa-plus"></i></button>
-    <button type="button" class="btn btn-secondary"data-toggle="modal"  data-target="#Editar"><i class="fas fa-edit"></i></button>
-    <button type="button" class="btn btn-secondary"data-toggle="modal" data-target="#Eliminar"><i class="fas fa-trash-alt"></i></button>
+   <!-- <button type="button" class="btn btn-secondary"data-toggle="modal"  data-target="#Editar"><i class="fas fa-edit"></i></button>
+    <button type="button" class="btn btn-secondary"data-toggle="modal" data-target="#Eliminar"><i class="fas fa-trash-alt"></i></button>-->
     <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Descarga"><i class="fas fa-download"></i></button>
         </span>
 
@@ -33,27 +33,29 @@
               <table id="dt-basic-checkbox" class="table table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
                   <tr>
-                    <th></th>
                     <th>RPE:</th>
                     <th>Nombre</th>
                     <th>Puesto</th>
+                    <th></th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tfoot>
                   <tr>
-                    <th></th>
                     <th>RPE</th>
                     <th>Nombre</th>
                     <th>Puesto</th>
+                    <th></th>
+                    <th></th>
                   </tr>
                 </tfoot>
                 <tbody>
-                  <tr class="unread">
-                    <td ><input type="checkbox" checked="checked" /></td>
-                                                <td>1234</td>
-                                                <td>juan</td>
-                                                
-                                                <td>rrrr</td>
+                  <tr>
+                    <td>1234</td>
+                    <td>juan</td>
+                    <td>rrrr</td>
+                    <td><button type="button" class="btn btn-info"data-toggle="modal"  data-target="#Editar"><i class="fas fa-edit"></i></button></td>
+                    <td><button type="button" class="btn btn-danger"data-toggle="modal" data-target="#Eliminar"><i class="fas fa-trash-alt"></i></button></td>
                                                 
                     </tr>
                   
