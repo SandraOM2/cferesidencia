@@ -36,6 +36,7 @@
                     <th>RPE:</th>
                     <th>Nombre</th>
                     <th>Puesto</th>
+                    <th>Contraseña</th>
                     <th></th>
                     <th></th>
                   </tr>
@@ -45,6 +46,7 @@
                     <th>RPE</th>
                     <th>Nombre</th>
                     <th>Puesto</th>
+                    <th>Contraseña</th>
                     <th></th>
                     <th></th>
                   </tr>
@@ -54,6 +56,7 @@
                     <td>1234</td>
                     <td>juan</td>
                     <td>rrrr</td>
+                    <td>****************</td>
                     <td><button type="button" class="btn btn-info"data-toggle="modal"  data-target="#Editar"><i class="fas fa-edit"></i></button></td>
                     <td><button type="button" class="btn btn-danger"data-toggle="modal" data-target="#Eliminar"><i class="fas fa-trash-alt"></i></button></td>
                                                 
@@ -95,6 +98,11 @@
             <label for="recipient-name" class="col-form-label">Puesto:</label>
             <input type="text" class="form-control" id="recipient-name">
           </div>
+
+          <div class="form-group">
+            <label for="inputPassword5">Contraseña:</label>
+            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+          </div>
           
         </form>
       </div>
@@ -131,6 +139,11 @@
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Puesto:</label>
             <input type="text" class="form-control" id="recipient-name">
+          </div>
+
+           <div class="form-group">
+            <label for="inputPassword5">Contraseña:</label>
+            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
           </div>
           
         </form>
