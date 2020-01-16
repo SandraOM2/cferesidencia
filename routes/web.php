@@ -31,6 +31,17 @@ Route::get('/pp', function () {
     return view('Registro.registrar');
 });
 
+Route::get('/ay', function () {
+    return view('Registros.registros');
+});
+
+
+
+Route::get('/camara', function () {
+    return view('Camara.cam');
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

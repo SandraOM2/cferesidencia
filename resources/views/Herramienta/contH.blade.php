@@ -136,8 +136,8 @@
       </div>
       <div class="modal-footer">
         <label for="inputZip">Foto:</label>
-        <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fas fa-camera"></i></button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <a class="btn btn-outline-success" href="/camara" role="button"><i class="fas fa-camera"></i></a>
+        <button type="reset" class="btn btn-secondary" value="Reset" data-dismiss="modal">Cancelar</button>
         <button type="button" class="btn btn-primary" style="background:#7AB416">Añadir Registro</button>
       </div>
     </div>
@@ -200,11 +200,14 @@
 
           
       </div>
-      <div class="modal-footer">
+     <div class="modal-footer">
         <label for="inputZip">Foto:</label>
-        <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fas fa-camera"></i></button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" style="background:#7AB416">Editar Registro</button>
+        <a class="btn btn-outline-success" href="/camara" role="button"><i class="fas fa-camera"></i></a>
+        <button type="reset" class="btn btn-secondary" value="Reset" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" style="background:#7AB416" data-dismiss="alert">Editar Registro</button>
+
+
+        
       </div>
     </div>
   </div>

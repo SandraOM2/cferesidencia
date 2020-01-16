@@ -77,7 +77,17 @@
           </div>          
         </div>
 
-       
+
+
+
+
+
+
+
+
+       <!-- <input type="file" name="file" accept="image/*" capture>
+       <input class="btn btn-primary" type="submit" value="Submit" accept="image/*;capture=camera"/ >
+      <button <input accept="image/*"  capture/ type="button" class="btn btn-success">Guardar   </button>-->
 
 <!-- Modal -->
 <div class="modal fade" id="Herramientas" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
@@ -105,7 +115,11 @@
                    
                     <td><div class="custom-control custom-switch"><input type="checkbox" class="custom-control-input" id="customSwitch1"><label class="custom-control-label" for="customSwitch1"></label></div></td>
                     <td>Cable</td>
-                    <td><button type="button" class="btn btn-success"><i class="fas fa-camera"></i></button></td>
+                    <td><button type="button" class="btn btn-success"><a href="/camara"><i class="fas fa-camera"></i></button></td>
+                    
+                    <!--<td><button type="file" class="btn btn-success" accept="image/*" capture="camera" ><i class="fas fa-camera"></i></button></td>
+                    <td><input  type="submit" accept="image/*;capture=camera"/>
+<input type="submit"/></td>-->
                   </tr>
                  
                 </tbody>

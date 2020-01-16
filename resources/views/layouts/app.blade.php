@@ -139,6 +139,14 @@
     <!-- Sidebar -->
 
     <ul class="sidebar navbar-nav" style="background:#7AB416">
+      
+    <li class="nav-item active">
+        <a class="nav-link" href="/home">
+          <i class="fas fa-hard-hat"></i>
+          <span>Personal Operador</span>
+        </a>
+      </li>
+
       <li class="nav-item active">
         <a class="nav-link" href="/ya">
           <i class="fas fa-hard-hat"></i>
@@ -146,24 +154,31 @@
         </a>
       </li>
       
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="/yaa">
           <i class="fas fa-tools"></i>
           <span>Herramienta</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="/yap">
           <i class="fas fa-truck-monster"></i>
           <span>Vehículos</span></a>
       </li>
 
-
-      <li class="nav-item">
-        <a class="nav-link" href="/home">
-          <i class="fas fa-hard-hat"></i>
-          <span>Personal Operador</span>
+      <li class="nav-item active">
+        <a class="nav-link" href="/ay">
+          <i class="fas fa-clipboard"></i>
+          <span>Registro</span>
         </a>
       </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="/qr">
+          <i class="fas fa-qrcode"></i>
+          <span>QR</span>
+        </a>
+      </li>
+
     </ul>
         @endguest
             @yield('content')
