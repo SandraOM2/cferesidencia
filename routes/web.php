@@ -41,6 +41,10 @@ Route::get('/camara', function () {
     return view('Camara.cam');
 });
 
+Route::get('/her', function () {
+    return view('Registro.Rherramienta');
+});
+
 
 Auth::routes();
 

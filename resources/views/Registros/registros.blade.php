@@ -31,38 +31,43 @@
               <table id="dt-basic-checkbox" class="table table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
                   <tr>
-                    <th>ID</th>
-                    <th>Tipo</th>
-                    <th>Marca</th>
+                    <th>RPE</th>
+                    <th>No. Económico</th>
+                    <th>Descripción</th>
+                    <th>Herramienta</th>
+                    <th>Trimestre</th>
                     <th>Estado</th>
                     <th>Observaciones</th>
                     <th>Foto</th>
-                    <th></th>
-                    <th></th>
+                    <th>Fecha</th>
+                    
                   </tr>
                 </thead>
                 <tfoot>
                   <tr>
-                    <th>ID</th>
-                    <th>Tipo</th>
-                    <th>Marca</th>
+                    <th>RPE</th>
+                    <th>No. Económico</th>
+                    <th>Descripción</th>
+                    <th>Herramienta</th>
+                    <th>Trimestre</th>
                     <th>Estado</th>
                     <th>Observaciones</th>
                     <th>Foto</th>
-                    <th></th>
-                    <th></th>
+                    <th>Fecha</th>
                   </tr>
                 </tfoot>
                 <tbody>
                   <tr>
                     <td>1234</td>
-                    <td>cable</td>
-                    <td>rrrr</td>
-                    <td>bueno</td>
-                    <td>ninguna</td>
-                    <td><button type="button" class="btn btn-success"><i class="fas fa-camera"></i></button></td>
-                    <td><button type="button" class="btn btn-info"data-toggle="modal"  data-target="#Editar"><i class="fas fa-edit"></i></button></td>
-                    <td><button type="button" class="btn btn-danger"data-toggle="modal" data-target="#Eliminar"><i class="fas fa-trash-alt"></i></button></td>
+                    <td>1902</td>
+                    <td>ES</td>
+                    <td>Cinturon de seguridad</td>
+                    <td>1</td>
+                    <td>B</td>
+                    <td>N/A</td>
+                    <td> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#photo"><i class="fas fa-image"></i></button></td>
+                    <td>14-05-20</td>
+                   
                     </tr>
                   
          
@@ -98,5 +103,30 @@
     </div>
   </div>
 </div>
+
+<!-- imagen -->
+<div class="modal fade" id="photo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <picture>
+            <source srcset="/img/cfe.png" type="image/svg+xml">
+            <img src="/img/cfe.png" class="img-fluid img-thumbnail" alt="/img/tools.png">
+            </picture>
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background:#7AB416">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </div>
 @endsection

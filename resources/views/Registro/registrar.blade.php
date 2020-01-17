@@ -39,7 +39,7 @@
                 <div class="card-body-icon">
                   <i class="fas fa-truck-monster"></i>
                 </div>
-                <div class="mr-5">Vehiculo:</div>
+                <div class="mr-5">No. Económico:</div>
               </div>
               <a class="card-footer text-white clearfix small z-1">
                 <span class="float-left">40000</span>
@@ -47,103 +47,43 @@
               </a>
             </div>
           </div>
+          
           <div class="col-xl-3 col-sm-6 mb-3">
-            <div class="card text-white bg-warning o-hidden h-100"data-toggle="modal"  data-target="#Herramientas">
+          	<div class="card text-white bg-secondary o-hidden h-100" data-toggle="modal"  data-target="#Trimestre">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="fas fa-calendar-week"></i>
+                </div>
+                <div class="mr-5">Trimestre:</div>
+              </div>
+              <a class="card-footer text-white clearfix small z-1">
+                <span class="float-left">1</span>
+                
+              </a>
+            </div>
+          </div>  
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-warning o-hidden h-100" href="/her">
               <div class="card-body">
                 <div class="card-body-icon">
                  <i class="fas fa-tools"></i>
                 </div>
                 <div class="mr-5">Herramienta:</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1">
+              <a class="card-footer text-white clearfix small z-1" href="/her">
                 <span class="float-left">Registro de Herramienta</span>
                 
               </a>
             </div>
           </div>
-          <div class="col-xl-3 col-sm-6 mb-3">
-          	<div class="card text-white bg-secondary o-hidden h-100" data-toggle="modal"  data-target="#Observaciones">
-              <div class="card-body">
-                <div class="card-body-icon">
-                  <i class="far fa-comments"></i>
-                </div>
-                <div class="mr-5">Observaciones:</div>
-              </div>
-              <a class="card-footer text-white clearfix small z-1" href="#">
-                <span class="float-left">Añadir Observaciones</span>
-                
-              </a>
-            </div>
-          </div>          
+                  
         </div>
 
 
 
 
-
-
-
-
-
-       <!-- <input type="file" name="file" accept="image/*" capture>
-       <input class="btn btn-primary" type="submit" value="Submit" accept="image/*;capture=camera"/ >
-      <button <input accept="image/*"  capture/ type="button" class="btn btn-success">Guardar   </button>-->
-
-<!-- Modal -->
-<div class="modal fade" id="Herramientas" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalScrollableTitle">Herramienta</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-   <table class="table table-borderless" width="100%" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>Herramienta</th>
-                    <th>Foto</th>
-                    
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                   
-                    <td><div class="custom-control custom-switch"><input type="checkbox" class="custom-control-input" id="customSwitch1"><label class="custom-control-label" for="customSwitch1"></label></div></td>
-                    <td>Cable</td>
-                    <td><button type="button" class="btn btn-success"><a href="/camara"><i class="fas fa-camera"></i></button></td>
-                    
-                    <!--<td><button type="file" class="btn btn-success" accept="image/*" capture="camera" ><i class="fas fa-camera"></i></button></td>
-                    <td><input  type="submit" accept="image/*;capture=camera"/>
-<input type="submit"/></td>-->
-                  </tr>
-                 
-                </tbody>
-              </table>
-            
-            
-        
-
-     
-
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-success">Guardar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!----------------------------- Observaciones--------------------------->
-<div class="modal fade" id="Observaciones" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true" data-backdrop="static">
+<!----------------------------- Trimestre--------------------------->
+<!--<div class="modal fade" id="Trimestre" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true" data-backdrop="static">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -155,8 +95,7 @@
       <div class="modal-body">
 
        <div class="form-group">
-    <label for="exampleFormControlTextarea1"></label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <input type="range" class="custom-range" min="1" max="3" step="0.5" id="customRange3">
   </div>
        </div>
       <div class="modal-footer">
@@ -165,7 +104,7 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
 
 
 

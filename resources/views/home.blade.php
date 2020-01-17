@@ -51,7 +51,7 @@
                 <div class="card-body-icon">
                   <i class="fas fa-truck-monster"></i>
                 </div>
-                <div class="mr-5">Vehículo:</div>
+                <div class="mr-5">No. Económico:</div>
               </div>
               <a class="card-footer text-white clearfix small z-1">
                 <span class="float-left">47000</span>
