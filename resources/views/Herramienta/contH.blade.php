@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
  <div id="content-wrapper">
 
       <div class="jumbotron jumbotron-fluid" style="background:#F2F5ED">
@@ -220,7 +222,7 @@
         <label for="inputZip">Foto:</label>
         <a class="btn btn-outline-success" href="/camara" role="button"><i class="fas fa-camera"></i></a>
         <button type="reset" class="btn btn-secondary" value="Reset" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-success" style="background:#7AB416">Editar Registro</button>
+        <button type="button" class="btn btn-success" value="Reset" data-dismiss="modal" style="background:#7AB416">Editar Registro</button>
       </div>
     </div>
   </div>
@@ -290,7 +292,28 @@
   </div>
 </div>
 
+<!--         <button id="btn" type="button" class="btn btn-secondary" data-dismiss="modal" style="background:#7AB416">Aceptar</button>
+<br></br>
+
+
+<div id="myAlert" class="alert alert-warning collapse">
+    <strong>Warning!</strong> Please enter a valid value in all the required fields before proceeding.
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+</div>
 
 
 </div>
+
+<script type="text/javascript">
+  $('#myAlert').on('closed.bs.alert', function () {
+  // do something...
+})
+  
+  $(document).ready(function(){
+    $('#btn').click(function(){
+      $('#myAlert').show('fade');
+    });
+  });
+</script>-->
+
 @endsection

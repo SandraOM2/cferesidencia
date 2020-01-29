@@ -14,6 +14,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -34,6 +35,9 @@
 
 
   <link href="{{ asset('css/checklist.css') }}" rel="stylesheet">
+
+
+
   
   
 </head>
@@ -54,9 +58,11 @@
                 </a>
 
 
-    <button class="btn btn-link btn-sm text-white order-1 order-sm-0 "  id="sidebarToggle" href="#"  style="background:#14BF46">
+  <button class="btn btn-success btn-sm text-white order-1 order-sm-0 "  id="sidebarToggle" href="#" >
      <i class="fas fa-bars"></i>
     </button>
+
+
 @endguest
                  <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
@@ -78,16 +84,7 @@
                            
                         @else
 
-<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-      <div class="input-group">
-        <input type="text" class="form-control mr-sm-2" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="button">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
+
         
 
 
@@ -101,7 +98,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Cerrar Sesión') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -214,4 +211,8 @@
   <!------- tabla ---->
   <script src="js/tabla.js"></script>
   <script src="js/check.js"></script>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </html>

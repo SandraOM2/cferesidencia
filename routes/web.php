@@ -36,13 +36,16 @@ Route::get('/ay', function () {
 });
 
 
-
 Route::get('/camara', function () {
     return view('Camara.cam');
 });
 
 Route::get('/her', function () {
     return view('Registro.Rherramienta');
+});
+
+Route::get('/qr', function () {
+    return view('qr.qr');
 });
 
 

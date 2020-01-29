@@ -12,7 +12,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card" >
-                <div class="card-header" ><center><a href="/pp" ><img src="img/inge3.png" height="150" width="150"></a></center></div><center>
+                <div class="card-header" ><center><a href="/her" ><img src="img/inge3.png" height="150" width="150"></a></center></div><center>
                                         <div class="comp-tl">
                                             <h2>Nombre: Sandra</h2>
                                             <p>RPE: 14562</p>

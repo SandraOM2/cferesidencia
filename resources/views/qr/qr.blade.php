@@ -6,23 +6,15 @@
 <div id="content-wrapper">
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand">RPE: 143289</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link">Vehiculo:4567</a>
-      </li>
-      <li class="nav-item">
-        
-      </li>
-    </ul>
-    <span class="navbar-text">
-      
-    </span>
+  <form class="form-inline">
+  <div class="form-row">
+    
+  <div class="form-group mx-sm-3 mb-2">
+  	<a class="navbar-brand">N° Económico</a>
+    <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
   </div>
+</form>
 </nav>
 
       <!-- DataTables Example -->
@@ -33,16 +25,20 @@
               <table class="table table-bordered" width="100%" cellspacing="0">
                 <thead class="table-success">
                   <tr>
+                  	<th></th>
                     <th>Equipo de Seguridad</th>
                     <th>Estado</th>
-                    <th>Foto</th>
-                    <th>Obcervaciones</th>
+                    
                     
                   </tr>
                 </thead>
                 
                 <tbody>
                   <tr >
+                  	<td><div class="custom-control custom-radio">
+  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio1"></label>
+</div></td>
                     <td>Cinturon de Seguridad</td>
                     <td><select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                           <option selected>...</option>
@@ -51,23 +47,24 @@
                           <option value="3">F</option>
                           <option value="4">X</option>   
                         </select></td>
-                    <td><a class="btn btn-success" href="/camara" role="button"><i class="fas fa-camera"></i></a></td>
-                    <td><button type="button" class="btn btn-info"data-toggle="modal" data-target="#Obcervaciones"><i class="fas fa-comment-dots"></i></button></td>
-                    </tr>
+                   </tr>
                     
                 </tbody>
 
                 <thead class="table-success">
                   <tr>
+                  	<th></th>
                     <th>Herramienta Menor</th>
                     <th>Estado</th>
-                    <th>Foto</th>
-                    <th>Obcervaciones</th>
+                    
                     
                   </tr>
                 </thead>
 
                <tr >
+               		<td><div class="custom-control custom-radio">
+  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio1"></td>
                     <td>Broca</td>
                     <td><select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                           <option selected>...</option>
@@ -76,8 +73,7 @@
                           <option value="3">F</option>
                           <option value="4">X</option>   
                         </select></td>
-                    <td><a class="btn btn-success" href="/camara" role="button"><i class="fas fa-camera"></i></a></td>
-                    <td><button type="button" class="btn btn-info"data-toggle="modal" data-target="#Obcervaciones"><i class="fas fa-comment-dots"></i></button></td>
+                   
                     </tr>
                 
                 <tbody>
@@ -86,16 +82,19 @@
 
                 <thead class="table-success">
                   <tr>
+                  	<th></th>
                     <th>Herramienta Especializada</th>
                     <th>Estado</th>
-                    <th>Foto</th>
-                    <th>Obcervaciones</th>
+                    
                     
                   </tr>
                 </thead>
                 
                 <tbody>
                  <tr >
+                 	<td><div class="custom-control custom-radio">
+  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio1"></td>
                     <td>Escalera de Fibra de Vidrio</td>
                     <td><select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                           <option selected>...</option>
@@ -104,24 +103,26 @@
                           <option value="3">F</option>
                           <option value="4">X</option>   
                         </select></td>
-                    <td><a class="btn btn-success" href="/camara" role="button"><i class="fas fa-camera"></i></a></td>
-                    <td><button type="button" class="btn btn-info"data-toggle="modal" data-target="#Obcervaciones"><i class="fas fa-comment-dots"></i></button></td>
+                    
                     </tr>
                   
                 </tbody>
 
                 <thead class="table-success">
                   <tr>
+                  	<th></th>
                     <th>Equipo de Peueba</th>
                     <th>Estado</th>
-                    <th>Foto</th>
-                    <th>Obcervaciones</th>
+                    
                     
                   </tr>
                 </thead>
                 
                 <tbody>
                  <tr >
+                 	<td><div class="custom-control custom-radio">
+  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio1"></td>
                     <td>Probador de transformador</td>
                     <td><select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                           <option selected>...</option>
@@ -130,8 +131,7 @@
                           <option value="3">F</option>
                           <option value="4">X</option>   
                         </select></td>
-                    <td><a class="btn btn-success" href="/camara" role="button"><i class="fas fa-camera"></i></a></td>
-                    <td><button type="button" class="btn btn-info"data-toggle="modal" data-target="#Obcervaciones"><i class="fas fa-comment-dots"></i></button></td>
+                    
                     </tr>
                   
                 </tbody>
@@ -139,16 +139,19 @@
 
                 <thead class="table-success">
                   <tr>
+                  	<th></th>
                     <th>Accesorios</th>
                     <th>Estado</th>
-                    <th>Foto</th>
-                    <th>Obcervaciones</th>
+                    
                     
                   </tr>
                 </thead>
                 
                 <tbody>
                  <tr >
+                 	<td><div class="custom-control custom-radio">
+  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio1"></td>
                     <td>Cámara Forográfica</td>
                     <td><select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                           <option selected>...</option>
@@ -158,8 +161,7 @@
                           <option value="4">X</option>                       
 
                         </select></td>
-                    <td><a class="btn btn-success" href="/camara" role="button"><i class="fas fa-camera"></i></a></td>
-                    <td><button type="button" class="btn btn-info"data-toggle="modal" data-target="#Obcervaciones"><i class="fas fa-comment-dots"></i></button></td>
+                    
                     </tr>
                   
                 </tbody>
@@ -209,10 +211,40 @@
           
       </div>
       <div class="modal-footer">
+      	
         <button type="reset" class="btn btn-secondary" value="Reset" data-dismiss="modal">Cancelar</button>
         <button type="button" class="btn btn-primary" style="background:#7AB416">Guardar</button>
+
       </div>
     </div>
   </div>
 </div>
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#photo"><i class="fas fa-qrcode"></i></button>
+
+
+<div class="modal fade" id="photo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="visible-print text-center">
+  {!! QrCode::size(200)->generate(Request::url('/her')); !!}
+  <p></p>
+</div>
+
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background:#7AB416">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 @endsection
