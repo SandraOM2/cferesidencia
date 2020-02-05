@@ -1,8 +1,5 @@
 @extends('layouts.app')
-
 @section('content')
-
-
 <div id="content-wrapper">
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">

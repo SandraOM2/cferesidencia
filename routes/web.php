@@ -16,6 +16,10 @@ Route::resource('herramientas', 'HerramientasController');
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/Principal', function () {
+    return view('PrincipalOP.home');
+});
+
 Route::get('/yaa', function () {
     return view('Herramienta.contH');
 });
@@ -34,7 +38,7 @@ Route::get('/pp', function () {
 });
 
 Route::get('/ay', function () {
-    return view('Registros.registros');
+    return view('Reportes.registros');
 });
 
 
@@ -43,7 +47,7 @@ Route::get('/camara', function () {
 });
 
 Route::get('/her', function () {
-    return view('Registro.Rherramienta');
+    return view('PrincipalOP.Rherramienta');
 });
 
 Route::get('/qr', function () {
@@ -53,4 +57,6 @@ Route::get('/qr', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+/*Route::get('/home', 'HomeController@index')->name('home');*/
+
+

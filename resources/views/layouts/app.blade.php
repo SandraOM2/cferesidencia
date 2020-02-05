@@ -47,14 +47,14 @@
              @guest 
              <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             
-                    <a class="navbar-brand mr-1" href="/home" ><img src="img/logocfe.png" height="40" width="70">
+                    <a class="navbar-brand mr-1" href="/Principal" ><img src="img/logocfe.png" height="40" width="70">
                 </a>
 
              @else    
 
              <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             
-                    <a class="navbar-brand mr-1" href="/home" ><img src="img/logocfe.png" height="40" width="70">
+                    <a class="navbar-brand mr-1" href="/Principal" ><img src="img/logocfe.png" height="40" width="70">
                 </a>
 
 
@@ -166,13 +166,6 @@
         <a class="nav-link" href="/ay">
           <i class="fas fa-clipboard"></i>
           <span>Registro</span>
-        </a>
-      </li>
-
-      <li class="nav-item active">
-        <a class="nav-link" href="/qr">
-          <i class="fas fa-qrcode"></i>
-          <span>QR</span>
         </a>
       </li>
 
