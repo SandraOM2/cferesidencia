@@ -40,7 +40,6 @@
                     <th>Marca</th>
                     <th>Estado</th>
                     <th>Observaciones</th>
-                    <th>Foto</th>
                     <th></th>
                     <th></th>
                   </tr>
@@ -52,7 +51,6 @@
                     <th>Marca</th>
                     <th>Estado</th>
                     <th>Observaciones</th>
-                    <th>Foto</th>
                     <th></th>
                     <th></th>
                   </tr>
@@ -64,7 +62,6 @@
                     <td>rrrr</td>
                     <td>bueno</td>
                     <td>ninguna</td>
-                    <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#photo"><i class="fas fa-image"></i></button></td>
                     <td><button type="button" class="btn btn-info"data-toggle="modal"  data-target="#Editar"><i class="fas fa-edit"></i></button></td>
                     <td><button type="button" class="btn btn-danger"data-toggle="modal" data-target="#Eliminar"><i class="fas fa-trash-alt"></i></button></td>
                     </tr>
@@ -145,8 +142,6 @@
           
       </div>
       <div class="modal-footer">
-        <label for="inputZip">Foto:</label>
-        <a class="btn btn-outline-success" href="/camara" role="button"><i class="fas fa-camera"></i></a>
         <button type="reset" class="btn btn-secondary" value="Reset" data-dismiss="modal">Cancelar</button>
         <button type="button" class="btn btn-success" value="Reset" data-dismiss="modal"style="background:#7AB416">Añadir Registro</button>
       </div>

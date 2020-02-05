@@ -11,6 +11,8 @@
 |
 */
 
+Route::resource('herramientas', 'HerramientasController');
+
 Route::get('/', function () {
     return view('welcome');
 });

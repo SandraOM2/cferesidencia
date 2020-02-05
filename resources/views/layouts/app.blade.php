@@ -135,14 +135,14 @@
 
     <!-- Sidebar -->
 
-    <ul class="sidebar navbar-nav" style="background:#7AB416">
+    <ul class="sidebar navbar-nav" style="background:#056100">
       
-    <li class="nav-item active">
+   <!-- <li class="nav-item active">
         <a class="nav-link" href="/home">
           <i class="fas fa-hard-hat"></i>
           <span>Personal Operador</span>
         </a>
-      </li>
+      </li>-->
 
       <li class="nav-item active">
         <a class="nav-link" href="/ya">

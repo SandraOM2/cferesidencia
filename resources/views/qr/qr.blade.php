@@ -35,9 +35,9 @@
                 
                 <tbody>
                   <tr >
-                  	<td><div class="custom-control custom-radio">
-  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-  <label class="custom-control-label" for="customRadio1"></label>
+                  	<td><div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitch2">
+  <label class="custom-control-label" for="customSwitch2"></label>
 </div></td>
                     <td>Cinturon de Seguridad</td>
                     <td><select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
@@ -62,9 +62,10 @@
                 </thead>
 
                <tr >
-               		<td><div class="custom-control custom-radio">
-  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-  <label class="custom-control-label" for="customRadio1"></td>
+               		<td><div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitch3">
+  <label class="custom-control-label" for="customSwitch3"></label>
+</div></td>
                     <td>Broca</td>
                     <td><select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                           <option selected>...</option>
@@ -92,9 +93,10 @@
                 
                 <tbody>
                  <tr >
-                 	<td><div class="custom-control custom-radio">
-  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-  <label class="custom-control-label" for="customRadio1"></td>
+                 	<td><div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitch4">
+  <label class="custom-control-label" for="customSwitch4"></label>
+</div></td>
                     <td>Escalera de Fibra de Vidrio</td>
                     <td><select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                           <option selected>...</option>
@@ -120,9 +122,10 @@
                 
                 <tbody>
                  <tr >
-                 	<td><div class="custom-control custom-radio">
-  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-  <label class="custom-control-label" for="customRadio1"></td>
+                 <td><div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitch5">
+  <label class="custom-control-label" for="customSwitch5"></label>
+</div></td>
                     <td>Probador de transformador</td>
                     <td><select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                           <option selected>...</option>
@@ -149,9 +152,10 @@
                 
                 <tbody>
                  <tr >
-                 	<td><div class="custom-control custom-radio">
-  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-  <label class="custom-control-label" for="customRadio1"></td>
+ <td><div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+  <label class="custom-control-label" for="customSwitch1"></label>
+</div></td>
                     <td>Cámara Forográfica</td>
                     <td><select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                           <option selected>...</option>
@@ -176,8 +180,10 @@
               </table>
 
               <div align="right">
+             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#photo"><i class="fas fa-qrcode"></i></button>
              <button type="button" class="btn btn-secondary" style="background: #989C99">Cancelar</button>
              <button type="button" class="btn btn-success" style="background:#7AB416">Guardar</button>
+
             </div>
 
 
@@ -219,8 +225,6 @@
     </div>
   </div>
 </div>
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#photo"><i class="fas fa-qrcode"></i></button>
-
 
 <div class="modal fade" id="photo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -231,13 +235,12 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        <div class="visible-print text-center">
-  {!! QrCode::size(200)->generate(Request::url('/her')); !!}
-  <p></p>
-</div>
+      <div class="visible-print text-center">
+  {!! QrCode::size(100)->generate(Request::url('http://cferesidencia.test/her')); !!}
+  <p>Escanéame para volver a la página principal.</p>
 
-      </div>
+</div>
+      
       <div class="modal-footer">
          <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background:#7AB416">Aceptar</button>
       </div>

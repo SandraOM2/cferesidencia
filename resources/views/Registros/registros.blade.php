@@ -38,7 +38,6 @@
                     <th>Trimestre</th>
                     <th>Estado</th>
                     <th>Observaciones</th>
-                    <th>Foto</th>
                     <th>Fecha</th>
                     
                   </tr>
@@ -52,7 +51,6 @@
                     <th>Trimestre</th>
                     <th>Estado</th>
                     <th>Observaciones</th>
-                    <th>Foto</th>
                     <th>Fecha</th>
                   </tr>
                 </tfoot>
@@ -65,7 +63,6 @@
                     <td>1</td>
                     <td>B</td>
                     <td>N/A</td>
-                    <td> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#photo"><i class="fas fa-image"></i></button></td>
                     <td>14-05-20</td>
                    
                     </tr>

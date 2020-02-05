@@ -1,19 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-
-
-
 <div id="content-wrapper">
 
-      <div class="jumbotron jumbotron-fluid" style="background:#F2F5ED">
+<div class="jumbotron jumbotron-fluid" style="background:#F2F5ED">
   <div class="container">
-     <h1 class="display-4 text-secondary" ><i class="fas fa-tasks"></i> Registro </h1>
-    
+    <h1 class="display-4 text-secondary" ><i class="fas fa-tasks"></i> Registro </h1>    
   </div>
 </div>
 
-           <div id="content-wrapper">
+  <div id="content-wrapper">
 
       <div class="container-fluid">
         <!-- Icon Cards-->
