@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePersonalTable extends Migration
+class CreateModelosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreatePersonalTable extends Migration
      */
     public function up()
     {
-        Schema::create('personal', function (Blueprint $table) {
+        Schema::create('modelos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedTinyInteger('rpe');
-            $table->string('nombre');
-            $table->string('primerapellido');
-            $table->string('segundoapellido');
-
             $table->timestamps();
         });
     }
@@ -31,6 +26,6 @@ class CreatePersonalTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('personal');
+        Schema::dropIfExists('modelos');
     }
 }

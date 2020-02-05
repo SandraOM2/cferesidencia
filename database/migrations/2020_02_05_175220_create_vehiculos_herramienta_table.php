@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMarcaTable extends Migration
+class CreateVehiculosHerramientaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateMarcaTable extends Migration
      */
     public function up()
     {
-        Schema::create('marca', function (Blueprint $table) {
+        Schema::create('vehiculos_herramienta', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('descripcion');
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ class CreateMarcaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('marca');
+        Schema::dropIfExists('vehiculos_herramienta');
     }
 }
