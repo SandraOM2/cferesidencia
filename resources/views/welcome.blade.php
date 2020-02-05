@@ -72,7 +72,8 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                       <a href="/Principal">Home</a>
+                        
                     @else
                         <a href="{{ route('login') }}"><i class="fas fa-user-circle"></i></i> Login</a>
 
