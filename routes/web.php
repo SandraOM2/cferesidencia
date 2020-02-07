@@ -16,7 +16,7 @@ Route::resource('herramientas', 'HerramientasController');
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/Principal', function () {
+Route::get('/home', function () {
     return view('PrincipalOP.home');
 });
 

@@ -47,14 +47,14 @@
              @guest 
              <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             
-                    <a class="navbar-brand mr-1" href="/Principal" ><img src="img/logocfe.png" height="40" width="70">
+                    <a class="navbar-brand mr-1" href="/home" ><img src="img/logocfe.png" height="40" width="70">
                 </a>
 
              @else    
 
              <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             
-                    <a class="navbar-brand mr-1" href="/Principal" ><img src="img/logocfe.png" height="40" width="70">
+                    <a class="navbar-brand mr-1" href="/home" ><img src="img/logocfe.png" height="40" width="70">
                 </a>
 
 
