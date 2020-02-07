@@ -51,7 +51,7 @@ Route::get('/her', function () {
 });
 
 Route::get('/qr', function () {
-    return view('qr.qr');
+    return view('weno');
 });
 
 

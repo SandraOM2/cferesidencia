@@ -1,23 +1,47 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
+  <div>
+    <p class="decode-result">Last result: <b>{{ result }}</b></p>
 
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <qrcode-drop-zone @decode="onDecode" @init="logErrors">
+      <qrcode-stream @decode="onDecode" @init="onInit" />
+    </qrcode-drop-zone>
+
+    <qrcode-capture v-if="noStreamApiSupport" @decode="onDecode" />
+  </div>
 </template>
 
 <script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
+import { QrcodeStream, QrcodeDropZone, QrcodeCapture } from 'vue-qrcode-reader'
+
+export default {
+
+  components: { QrcodeStream, QrcodeDropZone, QrcodeCapture },
+
+  data () {
+    return {
+      result: '',
+      noStreamApiSupport: false
     }
+  },
+
+  methods: {
+    onDecode (result) {
+      this.result = result
+    },
+
+    logErrors (promise) {
+      promise.catch(console.error)
+    },
+
+    async onInit (promise) {
+      try {
+        await promise
+      } catch (error) {
+        if (error.name === 'StreamApiNotSupportedError') {
+          this.noStreamApiSupport = true
+        }
+      }
+    }
+  }
+}
 </script>
