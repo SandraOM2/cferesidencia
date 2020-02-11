@@ -41,17 +41,8 @@ class HerramientasController extends Controller
         $herramienta->descripcion = $request->descripcion;
         $herramienta->estado = 1;
         $herramienta->save();
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        return Herramienta::where('id', $id)->get();
+        return redirect('herramientas/');
     }
 
     /**
@@ -62,7 +53,8 @@ class HerramientasController extends Controller
      */
     public function edit($id)
     {
-        //
+        $herramienta = Herramienta::where('id', $id)->get()->first();
+        return view('Herramienta.create')->with('herramienta', $herramienta);
     }
 
     /**
