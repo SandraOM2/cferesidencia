@@ -99,7 +99,7 @@
       </li>
       
       <li class="nav-item active">
-        <a class="nav-link" href="/yaa">
+        <a class="nav-link" href="/herramientas">
           <i class="fas fa-tools"></i>
           <span>Herramienta</span></a>
       </li>

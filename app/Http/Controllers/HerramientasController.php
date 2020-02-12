@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Herramienta;
-
 use Illuminate\Http\Request;
+use App\Http\Requests\GuardarHerramientaRequest;
 
 class HerramientasController extends Controller
 {
@@ -16,7 +16,7 @@ class HerramientasController extends Controller
     public function index()
     {
         $herramientas = Herramienta::get();
-        return view('Herramienta.list')->with('herramientas', $herramientas);
+        return view('herramientas.listar')->with('herramientas', $herramientas);
     }
 
     /**
@@ -26,7 +26,7 @@ class HerramientasController extends Controller
      */
     public function create()
     {
-        return view('Herramienta.create');
+        return view('herramientas.crear')->with('herramienta', new Herramienta);
     }
 
     /**
@@ -35,14 +35,13 @@ class HerramientasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GuardarHerramientaRequest $request)
     {
-        $herramienta = new Herramienta();
-        $herramienta->descripcion = $request->descripcion;
-        $herramienta->estado = 1;
-        $herramienta->save();
+        // return $request->validated();
 
-        return redirect('herramientas/');
+        Herramienta::create($request->validated());
+
+        return redirect()->route('herramientas.index');
     }
 
     /**
@@ -54,7 +53,7 @@ class HerramientasController extends Controller
     public function edit($id)
     {
         $herramienta = Herramienta::where('id', $id)->get()->first();
-        return view('Herramienta.create')->with('herramienta', $herramienta);
+        return view('herramientas.editar')->with('herramienta', $herramienta);
     }
 
     /**
@@ -64,9 +63,11 @@ class HerramientasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Herramienta $herramienta, GuardarHerramientaRequest $request)
     {
-        //
+        $herramienta->update($request->validated());
+
+        return redirect()->route('herramientas.index');
     }
 
     /**
@@ -77,6 +78,6 @@ class HerramientasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
 }
