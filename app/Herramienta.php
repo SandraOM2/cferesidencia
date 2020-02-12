@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Herramienta extends Model
 {
-    protected $table = 'catalogo_herramientas';
+    protected $guarded = [];
 
     public function estado()
     {
