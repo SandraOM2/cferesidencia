@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVehiculosHerramientaTable extends Migration
+class CreateModeloTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreateVehiculosHerramientaTable extends Migration
      */
     public function up()
     {
-        Schema::create('vehiculos_herramienta', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('modelos', function (Blueprint $table) {
+             $table->bigIncrements('id');
+            $table->string('descripcion');
+            $table->unsignedInteger('marca');
+
             $table->timestamps();
+            $table->foreign('marca')->references('id')->on('marcas');
         });
     }
 
@@ -26,6 +30,6 @@ class CreateVehiculosHerramientaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vehiculos_herramienta');
+        Schema::dropIfExists('modelos');
     }
 }
