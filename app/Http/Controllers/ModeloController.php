@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Modelo;
 use Illuminate\Http\Request;
 
-class personalcontroller extends Controller
+class ModeloController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class personalcontroller extends Controller
      */
     public function index()
     {
-        //
+        $modelo = Modelo::get();
+        return view('modelo.listar')->with('modelo', $modelo);
     }
 
     /**
@@ -23,7 +25,7 @@ class personalcontroller extends Controller
      */
     public function create()
     {
-        //
+        return view('modelo.crear')->with('modelo', new Modelo);
     }
 
     /**
@@ -32,20 +34,13 @@ class personalcontroller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GuardarModeloRequest $request)
     {
-        //
-    }
+        // return $request->validated();
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        Modelo::create($request->validated());
+
+        return redirect()->route('modelo.index');
     }
 
     /**
@@ -56,7 +51,8 @@ class personalcontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $modelo = Modelo::where('id', $id)->get()->first();
+        return view('modelo.editar')->with('modelo', $modelo);
     }
 
     /**
@@ -66,9 +62,11 @@ class personalcontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(modelo $modelo, GuardarModeloRequest $request)
     {
-        //
+        $modelo->update($request->validated());
+
+        return redirect()->route('modelo.index');
     }
 
     /**
@@ -79,6 +77,6 @@ class personalcontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
 }
