@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Modelo;
 use Illuminate\Http\Request;
+use App\Http\Requests\GuardarModeloRequest;
+
 
 class ModeloController extends Controller
 {
