@@ -4,16 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class personalcontroller extends Controller
+class VehiculoController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $Vehiculo = Vehiculo::get();
+        return view('Vehiculo.listar')->with('Vehiculo', $Vehiculo);
     }
 
     /**
@@ -23,7 +24,7 @@ class personalcontroller extends Controller
      */
     public function create()
     {
-        //
+        return view('Vehiculo.crear')->with('Vehiculo', new Vehiculo);
     }
 
     /**
@@ -32,21 +33,16 @@ class personalcontroller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GuardarVehiculoRequest $request)
     {
-        //
+        // return $request->validated();
+
+        Vehiculo:create($request->validated());
+
+        return redirect()->route('Vehiculo.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -56,7 +52,8 @@ class personalcontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $Vehiculo= Vehiculo:where('id', $id)->get()->first();
+        return view('Vehiculo.editar')->with('Vehiculo', $Vehiculo);
     }
 
     /**
@@ -66,9 +63,11 @@ class personalcontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Vehiculo $Vehiculo, GuardarVehiculoRequest $request)
     {
-        //
+        $Vehiculo->update($request->validated());
+
+        return redirect()->route('Vehiculo.index');
     }
 
     /**
@@ -79,6 +78,8 @@ class personalcontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
+}
+
 }
