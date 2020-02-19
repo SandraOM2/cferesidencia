@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::resource('herramientas', 'HerramientasController');
 Route::resource('marca', 'MarcaController');
 Route::resource('modelo', 'ModeloController');
-Route::resource('Vehiculo', 'VehiculoController');
+Route::resource('vehiculo', 'vehiculoController');
 
 // Route::get('/home', function () {
 //     alert()->error('InfoAlert','Lorem ipsum dolor sit amet.');

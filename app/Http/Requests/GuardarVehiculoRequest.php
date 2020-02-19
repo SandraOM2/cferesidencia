@@ -21,17 +21,17 @@ class GuardarVehiculoRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+   public function rules()
     {
         return [
-            'descripcion' => 'required'
+            'numeroEconomico' => 'required'
         ];
     }
 
     public function messages()
     {
         return [
-            'descripcion.required' => 'Favor de ingresar una descripción'
+            'numeroEconomico.required' => 'Favor de ingresar una descripción'
         ];
     }
 }

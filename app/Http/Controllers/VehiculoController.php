@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Vehiculo;
 use Illuminate\Http\Request;
+use App\Http\Requests\GuardarVehiculoRequest;
 
 class VehiculoController extends Controller
 {
@@ -13,8 +15,8 @@ class VehiculoController extends Controller
      */
     public function index()
     {
-        $Vehiculo = Vehiculo::get();
-        return view('Vehiculo.listar')->with('Vehiculo', $Vehiculo);
+        $vehiculo = Vehiculo::get();
+        return view('vehiculo.listar')->with('vehiculo', $vehiculo);
     }
 
     /**
@@ -24,7 +26,7 @@ class VehiculoController extends Controller
      */
     public function create()
     {
-        return view('Vehiculo.crear')->with('Vehiculo', new Vehiculo);
+        return view('vehiculo.crear')->with('vehiculo', new Vehiculo);
     }
 
     /**
@@ -37,9 +39,9 @@ class VehiculoController extends Controller
     {
         // return $request->validated();
 
-        Vehiculo:create($request->validated());
+        Vehiculo::create($request->validated());
 
-        return redirect()->route('Vehiculo.index');
+        return redirect()->route('vehiculo.index');
     }
 
 
@@ -52,8 +54,8 @@ class VehiculoController extends Controller
      */
     public function edit($id)
     {
-        $Vehiculo= Vehiculo:where('id', $id)->get()->first();
-        return view('Vehiculo.editar')->with('Vehiculo', $Vehiculo);
+        $vehiculo= Vehiculo::where('id', $id)->get()->first();
+        return view('vehiculo.editar')->with('vehiculo', $vehiculo);
     }
 
     /**
@@ -63,11 +65,11 @@ class VehiculoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Vehiculo $Vehiculo, GuardarVehiculoRequest $request)
+    public function update(vehiculo $vehiculo, GuardarVehiculoRequest $request)
     {
-        $Vehiculo->update($request->validated());
+        $vehiculo->update($request->validated());
 
-        return redirect()->route('Vehiculo.index');
+        return redirect()->route('vehiculo.index');
     }
 
     /**
@@ -82,4 +84,4 @@ class VehiculoController extends Controller
     }
 }
 
-}
+
