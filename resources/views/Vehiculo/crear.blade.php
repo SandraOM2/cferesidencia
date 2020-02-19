@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container mt-2">
-	<form action="{{ route('Vehiculo.store') }}" method="POST">
-		@include('Vehiculo._form', ['transaccion' => 'Guardar', 'titulo' => 'Nuevo'])
+	<form action="{{ route('vehiculo.store') }}" method="POST">
+		@include('vehiculo._form', ['transaccion' => 'Guardar', 'titulo' => 'Nuevo'])
 	</form>
 </div>
 @endsection
