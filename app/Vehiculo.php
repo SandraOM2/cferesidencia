@@ -8,10 +8,15 @@ class Vehiculo extends Model
 {
     protected $guarded = [];
 
-    public function estado()
-    {
-        return $this->hasOne('App\Estado', 'estado');
-        return $this->hasOne('App\Marca', 'marca');
-        return $this->hasOne('App\Modelo', 'modelo');
+    public function estado() {
+        return $this->belongsTo('App\Estado');
+    }
+
+    public function marca() {
+        return $this->belongsTo('App\Marca');
+    }
+
+    public function modelo() {
+        return $this->belongsTo('App\Modelo');
     }
 }

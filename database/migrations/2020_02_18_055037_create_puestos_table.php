@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHerramientasTable extends Migration
+class CreatePuestosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateHerramientasTable extends Migration
      */
     public function up()
     {
-        Schema::create('herramientas', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('puestos', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('descripcion');
             $table->tinyInteger('estado_id')->unsigned();
             $table->timestamps();
-            
+
             $table->foreign('estado_id')->references('id')->on('estados')->onDelete('cascade');
         });
     }
@@ -30,6 +30,6 @@ class CreateHerramientasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('herramientas');
+        Schema::dropIfExists('puestos');
     }
 }

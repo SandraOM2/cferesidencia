@@ -14,12 +14,14 @@ class CreateModeloTable extends Migration
     public function up()
     {
         Schema::create('modelos', function (Blueprint $table) {
-             $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('descripcion');
-            $table->unsignedInteger('marca');
-
+            $table->integer('marca_id')->unsigned();
+            $table->tinyInteger('estado_id')->unsigned();
             $table->timestamps();
-            $table->foreign('marca')->references('id')->on('marcas');
+            
+            $table->foreign('marca_id')->references('id')->on('marcas')->onDelete('cascade');
+            $table->foreign('estado_id')->references('id')->on('estados')->onDelete('cascade');
         });
     }
 

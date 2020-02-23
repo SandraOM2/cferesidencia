@@ -4,10 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Marca extends Model
+class Puesto extends Model
 {
-	protected $guarded = [];
-	 
     public function estado() {
         return $this->belongsTo('App\Estado');
     }

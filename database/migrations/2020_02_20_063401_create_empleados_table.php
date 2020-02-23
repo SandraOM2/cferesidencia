@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMarcaTable extends Migration
+class CreateEmpleadosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,17 @@ class CreateMarcaTable extends Migration
      */
     public function up()
     {
-        Schema::create('marcas', function (Blueprint $table) {
+        Schema::create('empleados', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('descripcion');
+            $table->string('rpe')->unique();
+            $table->string('nombres');
+            $table->string('apellido_paterno');
+            $table->string('apellido_materno');
+            $table->integer('puesto_id')->unsigned();
+            $table->foreign('puesto_id')->references('id')->on('puestos')->onDelete('cascade');
             $table->tinyInteger('estado_id')->unsigned();
-            $table->timestamps();
-            
             $table->foreign('estado_id')->references('id')->on('estados')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
@@ -30,6 +34,6 @@ class CreateMarcaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('marcas');
+        Schema::dropIfExists('empleados');
     }
 }

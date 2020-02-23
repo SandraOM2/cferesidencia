@@ -10,8 +10,10 @@ class Modelo extends Model
 	 
 	 public function marca()
     {
-        return $this->hasOne('App\Marca', 'marcas');
+        return $this->belongsTo('App\Marca');
     }
-
-    //
+    
+    public function estado() {
+        return $this->belongsTo('App\Estado');
+    }
 }
