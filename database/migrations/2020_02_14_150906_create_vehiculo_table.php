@@ -14,19 +14,17 @@ class CreateVehiculoTable extends Migration
     public function up()
     {
         Schema::create('vehiculos', function (Blueprint $table) {
-
             $table->bigIncrements('id');
-            $table->string('numeroEconomico');
-            $table->unsignedInteger('marca');
-            $table->unsignedInteger('modelo');
+            $table->string('numero_economico');
+            $table->integer('marca_id')->unsigned();
+            $table->integer('modelo_id')->unsigned();
             $table->integer('año');
-            $table->unsignedTinyInteger('estado')->default(1);
+            $table->tinyInteger('estado_id')->unsigned();
 
             $table->timestamps();
-            $table->foreign('marca')->references('id')->on('marca');
-            $table->foreign('modelo')->references('id')->on('modelo');
-            $table->foreign('estado')->references('id')->on('estados');
-
+            $table->foreign('marca_id')->references('id')->on('marcas')->onDelete('cascade');
+            $table->foreign('modelo_id')->references('id')->on('modelos')->onDelete('cascade');
+            $table->foreign('estado_id')->references('id')->on('estados')->onDelete('cascade');
         });
     }
 

@@ -6,7 +6,7 @@ use App\Vehiculo;
 use Illuminate\Http\Request;
 use App\Http\Requests\GuardarVehiculoRequest;
 
-class VehiculoController extends Controller
+class VehiculosController extends Controller
 {
      /**
      * Display a listing of the resource.
@@ -44,8 +44,6 @@ class VehiculoController extends Controller
         return redirect()->route('vehiculo.index');
     }
 
-
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -54,8 +52,8 @@ class VehiculoController extends Controller
      */
     public function edit($id)
     {
-        $vehiculo= Vehiculo::where('id', $id)->get()->first();
-        return view('vehiculo.editar')->with('vehiculo', $vehiculo);
+        $Vehiculo = Vehiculo::where('id', $id)->get()->first();
+        return view('Vehiculo.editar')->with('Vehiculo', $Vehiculo);
     }
 
     /**
@@ -65,7 +63,7 @@ class VehiculoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(vehiculo $vehiculo, GuardarVehiculoRequest $request)
+    public function update(Vehiculo $vehiculo, GuardarVehiculoRequest $request)
     {
         $vehiculo->update($request->validated());
 
@@ -83,5 +81,3 @@ class VehiculoController extends Controller
         
     }
 }
-
-
