@@ -24,14 +24,16 @@ class GuardarModeloRequest extends FormRequest
     public function rules()
     {
         return [
-            'descripcion' => 'required'
+            'descripcion' => 'required',
+            'marca_id' => 'required'
         ];
     }
 
     public function messages()
     {
         return [
-            'descripcion.required' => 'Favor de ingresar una descripción'
+            'descripcion.required' => 'Favor de ingresar una descripción',
+            'marca_id.required' => 'Favor de seleccionar la marca del modelo'
         ];
     }
 }

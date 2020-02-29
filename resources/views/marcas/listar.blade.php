@@ -6,10 +6,10 @@
 		<div class="card-header">
 			<div class="row justify-content-between align-items-center">
 				<div class="col-auto">
-					<h1 class="mb-0">Vehiculos</h1>
+					<h2 class="mb-0">Marca</h2>
 				</div>
 				<div class="col-auto">
-					<a href="/vehiculo/crear" class="btn btn-primary">Nuevo</a>
+					<a href="{{ route('marcas.create') }}" class="btn btn-primary">Nuevo</a>
 				</div>
 			</div>
 		</div>
@@ -18,25 +18,19 @@
 				<thead>
 					<tr>
 						<th width="50">ID</th>
-						<th>Número Economico</th>
-						<th width="150">Marca</th>
-						<th width="100">Modelo</th>
-						<th width="100">Año</th>
-						<th width="100">Estado</th>
+						<th>Descripción</th>
+						<th width="150">Estado</th>
+						<th width="100">Acciones</th>
 					</tr>
 				</thead>
 				<tbody>
-					@forelse ($vehiculo as $vehiculo)
+					@forelse ($marcas as $marca)
 					<tr>
-						<td>{{ $vehiculo->id }}</td>
-						<td>{{ $vehiculo->numeroEconomico }}</td>
-						<td>{{ $vehiculo->marca }}</td>
-						<td>{{ $vehiculo->modelo }}</td>
-						<td>{{ $vehiculo->año }}</td>
-						<td>{{ $vehiculo->estado }}</td>
-
+						<td>{{ $marca->id }}</td>
+						<td>{{ $marca->descripcion }}</td>
+						<td>{{ $marca->estado->descripcion }}</td>
 						<td>
-							<a href="/Vehiculo/{{ $vehiculo->id }}/editar" class="btn btn-primary btn-sm">Editar</a>
+							<a href="{{ route('marcas.edit', $marca) }}" class="btn btn-primary btn-sm">Editar</a>
 						</td>
 					</tr>
 					@empty

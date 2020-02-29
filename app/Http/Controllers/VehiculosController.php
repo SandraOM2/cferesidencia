@@ -2,82 +2,63 @@
 
 namespace App\Http\Controllers;
 
+use App\Marca;
+use App\Estado;
 use App\Vehiculo;
-use Illuminate\Http\Request;
 use App\Http\Requests\GuardarVehiculoRequest;
+use App\Modelo;
 
 class VehiculosController extends Controller
 {
-     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $vehiculo = Vehiculo::get();
-        return view('vehiculo.listar')->with('vehiculo', $vehiculo);
+        return view('vehiculos.listar')
+            ->with('vehiculos', Vehiculo::get());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        return view('vehiculo.crear')->with('vehiculo', new Vehiculo);
+        return view('vehiculos.crear')
+            ->with('vehiculo', new Vehiculo)
+            ->with('marcas', Marca::where('estado_id', 1)->get())
+            ->with('estados', Estado::get());
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(GuardarVehiculoRequest $request)
     {
-        // return $request->validated();
+        $vehiculo = new Vehiculo;
+        $vehiculo->numero_economico = $request->numero_economico;
+        $vehiculo->marca_id = $request->marca_id;
+        $vehiculo->modelo_id = $request->modelo_id;
+        $vehiculo->año = $request->año;
+        $vehiculo->estado_id = $request->estado_id;
+        $vehiculo->save();
 
-        Vehiculo::create($request->validated());
-
-        return redirect()->route('vehiculo.index');
+        return redirect()->route('vehiculos.index');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        $Vehiculo = Vehiculo::where('id', $id)->get()->first();
-        return view('Vehiculo.editar')->with('Vehiculo', $Vehiculo);
+        return view('vehiculos.editar')
+            ->with('vehiculo', Vehiculo::where('id', $id)->get()->first())
+            ->with('marcas', Marca::where('estado_id', 1)->get())
+            ->with('estados', Estado::get());
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Vehiculo $vehiculo, GuardarVehiculoRequest $request)
     {
-        $vehiculo->update($request->validated());
+        $vehiculo->numero_economico = $request->numero_economico;
+        $vehiculo->marca_id = $request->marca_id;
+        $vehiculo->modelo_id = $request->modelo_id;
+        $vehiculo->año = $request->año;
+        $vehiculo->estado_id = $request->estado_id;
+        $vehiculo->save();
 
-        return redirect()->route('vehiculo.index');
+        return redirect()->route('vehiculos.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function getModelosByMarca($marca_id)
     {
-        
+        return Modelo::select('id', 'descripcion')->where('marca_id', $marca_id)->get();
     }
 }

@@ -24,14 +24,20 @@ class GuardarVehiculoRequest extends FormRequest
    public function rules()
     {
         return [
-            'numeroEconomico' => 'required'
+            'numero_economico' => 'required',
+            'marca_id' => 'required',
+            'modelo_id' => 'required',
+            'año' => 'required'
         ];
     }
 
     public function messages()
     {
         return [
-            'numeroEconomico.required' => 'Favor de ingresar una descripción'
+            'numero_economico.required' => 'Favor de ingresar el número económico.',
+            'marca_id.required' => 'Favor de seleccionar una marca.',
+            'modelo_id.required' => 'Favor de seleccionar un modelo.',
+            'año.required' => 'Favor de ingresar año.'
         ];
     }
 }
