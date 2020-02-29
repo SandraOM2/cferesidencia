@@ -12,7 +12,6 @@
 
         <link rel="stylesheet" type="text/css" href="fontawesome\css\all.css">
 
-
         <!-- Styles -->
         <style>
             html, body {
@@ -72,12 +71,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                       <a href="/home">Home</a>
-                        
+                    <a href="{{ route('inicio') }}">Inicio</a>
                     @else
-                        <a href="{{ route('login') }}"><i class="fas fa-user-circle"></i></i> Login</a>
-
-                    
+                    <a href="{{ route('login') }}">
+                        <i class="fas fa-user-circle"></i>
+                        Login
+                    </a>
                     @endauth
                 </div>
             @endif
@@ -87,17 +86,6 @@
                 <div class="title m-b-md">
                     Control y Seguimiento
                 </div>
-
-              <!--  <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>-->
             </div>
         </div>
         

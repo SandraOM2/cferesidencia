@@ -28,8 +28,8 @@
 					<tr>
 						<td>{{ $herramienta->id }}</td>
 						<td>{{ $herramienta->descripcion }}</td>
-						<td>{{ $herramienta->estado }}</td>
-						<td>
+						<td>{{ $herramienta->estado->descripcion }}</td>
+						<td class="text-center">
 							<a href="/herramientas/{{ $herramienta->id }}/editar" class="btn btn-primary btn-sm">Editar</a>
 						</td>
 					</tr>

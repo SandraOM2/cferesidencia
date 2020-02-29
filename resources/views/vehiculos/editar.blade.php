@@ -5,7 +5,7 @@
 	<form action="{{ route('vehiculos.update', $vehiculo) }}" method="POST">
 		@method('PATCH')
 		
-		@include('vehiculo._form', ['transaccion' => 'Actualizar', 'titulo' => 'Editar'])
+		@include('vehiculos._form', ['transaccion' => 'Actualizar', 'accion' => 'Editar'])
 	</form>
 </div>
 @endsection

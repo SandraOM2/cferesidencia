@@ -2,80 +2,53 @@
 
 namespace App\Http\Controllers;
 
+use App\Estado;
 use App\Herramienta;
-use Illuminate\Http\Request;
 use App\Http\Requests\GuardarHerramientaRequest;
 
 class HerramientasController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $herramientas = Herramienta::get();
-        return view('herramientas.listar')->with('herramientas', $herramientas);
+        return view('herramientas.listar')
+            ->with('herramientas', $herramientas);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        return view('herramientas.crear')->with('herramienta', new Herramienta);
+        return view('herramientas.crear')
+            ->with('herramienta', new Herramienta)
+            ->with("estados", Estado::get());
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(GuardarHerramientaRequest $request)
     {
-        // return $request->validated();
-
-        Herramienta::create($request->validated());
+        $herramienta = new Herramienta;
+        $herramienta->descripcion = $request->descripcion;
+        $herramienta->estado_id = $request->estado_id;
+        $herramienta->save();
 
         return redirect()->route('herramientas.index');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $herramienta = Herramienta::where('id', $id)->get()->first();
-        return view('herramientas.editar')->with('herramienta', $herramienta);
+        return view('herramientas.editar')
+            ->with('herramienta', $herramienta)
+            ->with("estados", Estado::get());
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Herramienta $herramienta, GuardarHerramientaRequest $request)
     {
-        $herramienta->update($request->validated());
+        $herramienta->descripcion = $request->descripcion;
+        $herramienta->estado_id = $request->estado_id;
+        $herramienta->save();
 
         return redirect()->route('herramientas.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         
