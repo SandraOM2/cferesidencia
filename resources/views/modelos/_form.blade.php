@@ -1,18 +1,18 @@
 @csrf
 <div class="card">
     <div class="card-header">
-        <h2 class="mb-0">Modelos <small class="text-muted">{{ $accion }}</small></h2>
+        <h2 class="mb-0">Modelo/ <small class="text-muted">{{ $accion }}</small></h2>
     </div>
     <div class="card-body">
         <div class="row">
 
-            <div class="col-3 form-group">
-                <label for="id">Id</label>
+            <div class="col-md-2 form-group">
+                <label for="id">Id:</label>
                 <input class="form-control" type="text" name="id" id="id" value="{{ old('id', $modelo->id) }}" readonly>
             </div>
 
-            <div class="col-9 form-group">
-                <label for="descripcion">Descripcion</label>
+            <div class="col-6 form-group">
+                <label for="descripcion">Descripción:</label>
                 <input class="form-control @error('descripcion') is-invalid @enderror" id="descripcion" type="text" name="descripcion" value="{{ old('descripcion', $modelo->descripcion) }}">
                 @error('descripcion')
                 <span class="invalid-feedback" role="alert">
@@ -21,8 +21,8 @@
                 @enderror
             </div>
 
-            <div class="col-3 form-group">
-                <label for="marca_id">Marca</label>
+            <div class="col-4 form-group">
+                <label for="marca_id">Marca:</label>
                 <select id="marca_id" class="form-control @error('marca_id') is-invalid @enderror" name="marca_id">
                     <option value="" {{ old('marca_id', $modelo->marca_id) == null ? 'selected' : '' }}>Seleccionar una marca</option>
                     @foreach ($marcas as $marca)
@@ -36,8 +36,8 @@
                 @enderror
             </div>
 
-            <div class="col-3 form-group">
-                <label for="estado_id">Estado</label>
+            <div class="col-4 form-group">
+                <label for="estado_id">Estado:</label>
                 <select id="estado_id" class="form-control" name="estado_id">
                     @foreach ($estados as $estado)
                     <option value="{{ $estado->id }}" {{ $estado->id == old('estado_id', $marca->estado_id) ? 'selected' : '' }}>{{ $estado->descripcion }}</option>
@@ -49,7 +49,8 @@
     <div class="card-footer">
         <div class="row justify-content-between">
             <div class="col-auto">
-                <a href="{{ route('modelos.index') }}" class="btn btn-danger">Regresar</a>
+                <p align="right"><a href="{{ route('modelos.index') }}" class="btn btn-danger">Regresar</a></p>
+                
             </div>
             
             <div class="col-auto">

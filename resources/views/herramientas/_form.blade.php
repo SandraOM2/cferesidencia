@@ -1,15 +1,20 @@
 @csrf
 <div class="card">
     <div class="card-header">
-        <h1 class="mb-0">{{ $titulo }}</h1>
+        <div class="row">
+            <div class="col-auto">
+                <h2 class="mb-0">Herramienta/ <small class="text-muted">{{$titulo }}</small></h2>
+            </div>
+        </div>
     </div>
+
     <div class="card-body">
         <div class="row">
-            <div class="col-3 form-group">
+            <div class="form-group col-2 ">
                 <label for="id">Id</label>
                 <input class="form-control" type="text" name="id" id="id" value="{{ old('id', $herramienta->id) }}" readonly>
             </div>
-            <div class="col-9 form-group">
+            <div class="form-group col-md-4">
                 <label for="descripcion">Descripcion</label>
                 <input class="form-control @error('descripcion') is-invalid @enderror" id="descripcion" type="text" name="descripcion" value="{{ old('descripcion', $herramienta->descripcion) }}">
                 @error('descripcion')
@@ -18,7 +23,7 @@
                 </span>
                 @enderror
             </div>
-            <div class="col-3 form-group">
+            <div class="form-group col-4 ">
                 <label for="estado_id">Estado</label>
                 <select id="estado_id" class="form-control" name="estado_id">
                     @foreach ($estados as $estado)
@@ -31,7 +36,8 @@
     <div class="card-footer">
         <div class="row justify-content-between">
             <div class="col-auto">
-                <a href="/herramientas" class="btn btn-secondary">Regresar</a>
+                <p align="right"> <a href="{{ route('herramientas.index') }} " class="btn btn-danger">Regresar</a></p>
+               
             </div>
 
             <div class="col-auto">
