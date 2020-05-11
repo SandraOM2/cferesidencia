@@ -71,7 +71,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                    <a href="{{ route('inicio') }}">Inicio</a>
+                    <a href="{{ route('tablero.graficas') }}">Inicio</a>
                     @else
                     <a href="{{ route('login') }}">
                         <i class="fas fa-user-circle"></i>

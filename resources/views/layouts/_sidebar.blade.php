@@ -15,7 +15,8 @@
     <li class="nav-item {{ Request::is('herramientas') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route("herramientas.index") }}">
             <i class="fas fa-tools"></i>
-            <span>Herramienta</span></a>
+            <span>Herramienta</span>
+        </a>
     </li>
 
     <li class="nav-item dropdown {{ Request::is('vehiculos') ? 'active' : '' }}">
@@ -28,18 +29,15 @@
             <a class="dropdown-item" href="{{ route("modelos.index") }}">Alta Modelos </a>
             <a class="dropdown-item" href="{{ route("marcas.index") }}">Alta Marcas </a>
             
-          </div>
+        </div>
     </li>
 
-    <li class="nav-item">
-        <a class="nav-link" href="#">
+    <li class="nav-item {{ Request::is('salidas') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('salidas.index') }} ">
             <i class="fas fa-clipboard"></i>
-            <span>Registro</span>
+            <span>Salidas</span>
         </a>
     </li>
-
-
-
 
 </ul>
 

@@ -14,7 +14,7 @@ class CreateHerramientasTable extends Migration
     public function up()
     {
         Schema::create('herramientas', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('descripcion');
             $table->tinyInteger('estado_id')->unsigned();
             $table->timestamps();

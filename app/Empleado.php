@@ -13,4 +13,8 @@ class Empleado extends Model
     public function estado(){
         return $this->belongsTo('App\Estado');
     }
+
+    public function getNombreCompletoAttribute() {
+        return "{$this->nombres} {$this->apellido_paterno} {$this->apellido_materno}";
+    }
 }

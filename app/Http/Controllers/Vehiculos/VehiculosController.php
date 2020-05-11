@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Vehiculos;
 
 use App\Marca;
 use App\Estado;
 use App\Vehiculo;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\GuardarVehiculoRequest;
-use App\Modelo;
 
 class VehiculosController extends Controller
 {
@@ -56,9 +56,5 @@ class VehiculosController extends Controller
 
         return redirect()->route('vehiculos.index');
     }
-
-    public function getModelosByMarca($marca_id)
-    {
-        return Modelo::select('id', 'descripcion')->where('marca_id', $marca_id)->get();
-    }
+    
 }

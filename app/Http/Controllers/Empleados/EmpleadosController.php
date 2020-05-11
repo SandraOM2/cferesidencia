@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Empleados;
 
 use App\Empleado;
 use App\Estado;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\GuardarEmpleadoRequest;
 use App\Puesto;
-use Illuminate\Http\Request;
 
 class EmpleadosController extends Controller
 {

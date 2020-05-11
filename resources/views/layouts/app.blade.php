@@ -39,7 +39,7 @@
   <div id="page-top">
         
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">      
-      <a class="navbar-brand mr-1" href="{{ route('inicio') }}" >
+      <a class="navbar-brand mr-1" href="{{ route('tablero.graficas') }}" >
         <img src="{{ asset('img/logocfe.png') }}" height="30" width="55">
       </a>
       @guest 
