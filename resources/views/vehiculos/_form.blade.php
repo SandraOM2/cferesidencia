@@ -103,7 +103,7 @@
 
         let request = new XMLHttpRequest();
 
-        request.open('GET', '/vehiculos/obtener_modelos_por_marca/' + iMarca.value);
+        request.open('GET', '/vehiculos/marcas/' + iMarca.value);
         request.onload = () => {
             let modelos = JSON.parse(request.response);
 

@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Empleados;
 
 use App\Http\Requests\GuardarPuestoRequest;
 use App\Puesto;
 use App\Estado;
+use App\Http\Controllers\Controller;
 
 class PuestosController extends Controller
 {
@@ -55,10 +56,10 @@ class PuestosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Puesto $puesto)
     {
         return view('puestos.editar')
-            ->with('puesto', Puesto::where('id', $id)->get()->first())
+            ->with('puesto', $puesto)
             ->with('estados', Estado::get());;
     }
 

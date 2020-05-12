@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Vehiculos;
 
 use App\Estado;
+use App\Http\Controllers\Controller;
 use App\Modelo;
 use App\Http\Requests\GuardarModeloRequest;
 use App\Marca;

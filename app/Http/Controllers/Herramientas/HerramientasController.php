@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Herramientas;
 
 use App\Estado;
 use App\Herramienta;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\GuardarHerramientaRequest;
 
 class HerramientasController extends Controller

@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Vehiculo extends Model
 {
-    protected $guarded = [];
-
     public function estado() {
         return $this->belongsTo('App\Estado');
     }
@@ -18,5 +16,9 @@ class Vehiculo extends Model
 
     public function modelo() {
         return $this->belongsTo('App\Modelo');
+    }
+
+    public function getDescripcionAttribute() {
+        return "{$this->marca->descripcion} {$this->modelo->descripcion} {$this->año}";
     }
 }
